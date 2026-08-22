@@ -1,5 +1,5 @@
 import {useState, useEffect} from 'react'
-import {Container, PostCard} from '../components'
+import {Container, Postcard} from '../components'
 import databaseService from '../appwrite/database'
 import { useSelector } from 'react-redux'
 
@@ -31,7 +31,7 @@ function Home() {
             {posts ? (
             posts.map((post) => (
                 <div key={post.$id} className= "w-full sm:w-1/2 md:w-1/4 bg-gray-100 rounded-lg shadow-xl shadow-gray-500 p-4">
-                <PostCard {...post} />
+                <Postcard {...post} />
                 </div>
             )) ) : <p className='text-3xl text-gray-800 text-center'>No posts found...</p>}
             </div>

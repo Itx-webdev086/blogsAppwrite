@@ -1,0 +1,6 @@
+@import "tailwindcss";
+
+@utility container{
+    width:85%;
+    margin: auto;
+}

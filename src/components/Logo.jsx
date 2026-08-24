@@ -1,10 +1,10 @@
  
-import storiqoLogo from "../assets/storiqo-logo.png";
+import logo from "../assets/logo.png";
 
 
 function Logo({ className ='' }) {
   return <img 
-  src={storiqoLogo} 
+  src={logo} 
   alt="Logo"
   
   className={className}

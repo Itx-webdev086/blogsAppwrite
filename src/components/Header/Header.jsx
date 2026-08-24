@@ -54,7 +54,7 @@ function Header() {
         <nav className="flex">
           <div className="mr-5">
             <Link to="/">
-              <Logo className="w-16 h-16 rounded-full object-cover" />
+              <Logo className="w-20 h-16 rounded object-cover" />
             </Link>
           </div>
          {/* desktop nav */}

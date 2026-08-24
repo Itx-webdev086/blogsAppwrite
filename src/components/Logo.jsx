@@ -1,5 +1,5 @@
  
-import logo from "../assets/logo.png";
+import logo from "../assets/storiqo-logo.png";
 
 
 function Logo({ className ='' }) {

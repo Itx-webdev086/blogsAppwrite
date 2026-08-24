@@ -19,7 +19,7 @@ function Logo({ className = "" }) {
         </defs>
 
         <text
-          fill="white"
+          fill="black"
           fontSize="9"
           fontWeight="300"
           letterSpacing="1"
@@ -35,7 +35,7 @@ function Logo({ className = "" }) {
       </svg>
 
       {/* Center logo */}
-      <h1 className="text-2xl text-teal-500 font-extrabold font-mono z-10">
+      <h1 className="text-2xl text-teal-500 font-extrabold font-mono">
         storiqo
       </h1>
     </div>

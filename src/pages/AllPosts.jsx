@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useId} from 'react'
 import {Container, Postcard} from '../components'
 import databaseService from '../appwrite/database'
 
@@ -6,6 +6,7 @@ import databaseService from '../appwrite/database'
 function AllPosts() {
 
     const [posts, setPosts] = useState([])
+    const id = useId()
 
     useEffect(() => {
         databaseService.getPosts().then((posts) => {
@@ -20,7 +21,7 @@ function AllPosts() {
             <div className = "flex flex-wrap justify-center gap-4">
                
             {posts.map((post) => (
-                <div key={post.$id} className= "w-full sm:w-1/2 md:w-1/4 bg-gray-50 rounded-lg shadow-xl shadow-gray-500 p-4 hover:bg-gray-100">
+                <div key={id} className= "w-full sm:w-1/2 md:w-1/4 bg-gray-50 rounded-lg shadow-xl shadow-gray-500 p-4 hover:bg-gray-100">
                 <Postcard {...post} />
                 </div>
             ))} 

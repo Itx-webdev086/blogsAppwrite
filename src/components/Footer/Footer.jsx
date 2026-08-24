@@ -9,7 +9,7 @@ function Footer() {
 
                 <div className='w-full flex justify-center'>
                     <Link to='/'>
-                    <Logo className='w-38 h-24 rounded object-cover' />
+                    <Logo  />
                     </Link>
                 </div>
 

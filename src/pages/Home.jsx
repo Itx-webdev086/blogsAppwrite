@@ -2,6 +2,8 @@ import {useState, useEffect, useId} from 'react'
 import {Container, Postcard} from '../components'
 import databaseService from '../appwrite/database'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
+import Hero from '../assets/hero.png'
 
 function Home() {
     const userData = useSelector(state => state.auth.status)
@@ -17,9 +19,17 @@ function Home() {
     
    if (!userData) {
     return (
-        <div className='py-10 mt-28'>
-        <div className='flex justify-center items-center'>
-            <p className='text-3xl text-gray-500'>Please login to view posts...</p>
+        <div className='mt-28 h-screen w-full'>
+        <div className='flex justify-start items-center p-10 h-full w-full border border-gray-900 bg-cover bg-center' style={{ backgroundImage: `url(${Hero})` }}>
+         <div className="space-y-5">
+            <div className='text-4xl text-gray-800 font-extrabold font-serif'>
+                <h1>Your <br></br> thoughts & stories</h1>
+                <p className="font-medium text-gray-800">A place where stories begin, and people connect</p>
+            </div>
+            <div className='flex justify-start items-center gap-4'>
+            <Link to="/login" className='text-md text-white bg-gray-800 rounded-md py-2 px-4'>Start connecting...</Link>
+            </div>
+            </div>
         </div>
         </div>
         

@@ -1,7 +1,7 @@
 
 function Logo({ className ='' }) {
   return (
-    <div className={`flex flex-col py-1 px-3 shadow-md shadow-teal-500 rounded ${className}`}>
+    <div className={`flex flex-col py-1 px-3 shadow-md shadow-teal-500 rounded bg-gray-800 ${className}`}>
          <h1 className="text-2xl text-teal-500 font-extrabold font-mono">storiqo</h1>
          <span className="text-white font-thin -mt-1">where stories begin</span>
     </div>

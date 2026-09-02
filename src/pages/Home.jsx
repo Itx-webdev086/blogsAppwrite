@@ -3,7 +3,7 @@ import {Container, Postcard} from '../components'
 import databaseService from '../appwrite/database'
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import Hero from '../assets/hero.png'
+import Hero from '../assets/hero.jpg'
 
 function Home() {
     const userData = useSelector(state => state.auth.status)

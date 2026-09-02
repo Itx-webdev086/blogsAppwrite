@@ -27,7 +27,7 @@ function Home() {
                 <p className="font-medium text-gray-800">A place where stories begin, and people connect.</p>
             </div>
             <div className='flex justify-start items-center gap-4'>
-            <Link to="/login" className='text-md text-white bg-gray-800 rounded-md py-2 px-4'>Start connecting...</Link>
+            <Link to="/login" className='text-md text-white bg-gray-800 rounded-md py-2 px-4'>Start connecting</Link>
             </div>
             </div>
         </div>

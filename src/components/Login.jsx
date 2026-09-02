@@ -36,7 +36,7 @@ function Login() {
         
         <div className='w-full flex justify-center items-center p-5 mt-28'>
             <div className='w-2xl p-5 border border-gray-400 rounded-lg flex flex-col'>
-            <div className='mx-auto flex justify-center items-center'>
+            <div className='mx-auto bg-gray-800 flex justify-center items-center'>
                <span>
                 <Logo />
                 </span>

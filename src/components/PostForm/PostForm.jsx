@@ -78,7 +78,7 @@ function PostForm({post}) {
             <div className='w-2xl p-5 border border-gray-400 rounded-lg flex flex-col'>
             <div className='mx-auto flex justify-center items-center'>
                <span>
-                <Logo className='w-16 h-16 rounded-full object-cover' />
+                <Logo />
                 </span>
             </div>
             <h2 className='text-center text-gray-800 font-semibold my-5'>Add/Edit your blog !</h2>

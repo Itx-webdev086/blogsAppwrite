@@ -24,7 +24,7 @@ function Home() {
          <div className="space-y-5">
             <div className='text-4xl text-gray-800 font-extrabold font-serif'>
                 <h1>Your <br></br> thoughts & stories</h1>
-                <p className="font-medium text-gray-800">A place where stories begin, and people connect</p>
+                <p className="font-medium text-gray-800">A place where stories begin, and people connect.</p>
             </div>
             <div className='flex justify-start items-center gap-4'>
             <Link to="/login" className='text-md text-white bg-gray-800 rounded-md py-2 px-4'>Start connecting...</Link>

@@ -22,9 +22,9 @@ function Home() {
         <div className='mt-18 h-screen w-full'>
         <div className='flex justify-start items-center min-h-screen w-full bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${Hero})` }}>
          <div className="space-y-5 w-full bg-transparent p-16">
-            <div className='text-gray-800 font-mono space-y-7'>
+            <div className='text-gray-800 font-serif space-y-7'>
                 <h1 className='text-7xl font-extrabold'>Your <br></br> thoughts & stories</h1>
-                <p className="font-light text-gray-800">A place where stories begin, and people connect.</p>
+                <p className="text-gray-800">A place where stories begin, and people connect.</p>
             </div>
             <div className='flex justify-start items-center gap-4'>
             <Link to="/login" className='text-md text-white bg-gray-800 rounded-md py-2 px-4 hover:bg-teal-500 hover:text-gray-800 active:scale-95'>Start connecting</Link>

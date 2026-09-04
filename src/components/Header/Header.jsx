@@ -59,7 +59,8 @@ function Header() {
           </div>
          {/* desktop nav */}
           <ul className="hidden md:flex gap-4 items-center mx-auto">
-            {navItems.map((item) =>
+            {authStatus ? (
+            navItems.map((item) =>
                item.active ? (
                 <li key={item.name}>
                   <button
@@ -70,7 +71,14 @@ function Header() {
                   </button>
                 </li>
               ) : null,
-            )}
+            )):
+            <li>
+              <button
+              onClick={() => navigate('/signup')}
+               className="rounded bg-white text-gray-800 active:scale-95 cursor-pointer">
+                Get started
+              </button>
+              </li>}
             {authStatus && (
               <li>
                 <Logoutbtn />

@@ -89,6 +89,7 @@ function Header() {
           {/* desktop nav end */}
 
           {/* Mobile Menu icon */}
+          {authStatus ? (
           <button onClick={() => SetIsMobileMenu((prev) => !prev)}
           className="md:hidden ml-auto text-white p-2 rounded-md hover:text-teal-500 cursor-pointer"
           aria-label="Toggle menu"
@@ -104,13 +105,20 @@ function Header() {
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
               </svg>
             )}
-          </button>
+          </button>) : 
+          <button
+              onClick={() => navigate('/signup')}
+               className="md:hidden ml-auto text-nowrap rounded-md py-1 px-3 float-end font-semibold bg-white text-gray-800 active:scale-95 cursor-pointer">
+                Get started
+              </button>
+}
             {/* Mobile Menu icon end */}
 
         </nav>
 
         {/* Mobile dropdown menu */}
-        {isMobileMenu && (
+        {authStatus ? (
+        isMobileMenu && (
           <div className="md:hidden py-4 ">
             <ul className="flex flex-col gap-2">
               {navItems.map((item) =>
@@ -132,7 +140,7 @@ function Header() {
               )}
             </ul>
           </div>
-        )}
+        )) :  null }
 
         {/* Mobile dropdown menu end */}
 

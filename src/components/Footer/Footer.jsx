@@ -1,70 +1,55 @@
-import { Link } from 'react-router-dom'
-import { Container , Logo} from '../index'
+
+import { Container } from '../index'
+import { FaFacebook, FaInstagram, FaGithub, FaWhatsapp, FaLinkedinIn } from 'react-icons/fa'
 
 function Footer() {
     return (
-        <footer className='pt-5 bg-gray-800'>
+        <footer className='bg-gray-800'>
             <Container>
-               <div className='flex flex-wrap flex-col md:flex-row gap-5 justify-start md:justify-between items-start pb-5 px-5'>
-
-                <div className='w-full flex justify-center'>
-                    <Link to='/'>
-                    <Logo  />
-                    </Link>
-                </div>
-
+               
+              
+               <div className='w-full text-center py-2 flex flex-col md:flex-row justify-between gap-y-3'>
                 <div>
-                    <h2 className='text-2xl'>Pages</h2>
-                    <ul>
-                        <li className='hover:text-teal-500 text-white'>
-                            <Link to=''>
-                            Home
-                            </Link>
-                        </li>
-                        <li className='hover:text-teal-500 text-white'>
-                            <Link to=''>
-                            AllPosts
-                            </Link>
-                        </li>
-                        <li className='hover:text-teal-500 text-white'>
-                            <Link to=''>
-                            About Us
-                            </Link>
-                        </li>
-                        <li className='hover:text-teal-500 text-white'>
-                            <Link to=''>
-                            Featured Posts
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-
-                <div>
-                    <h2 className='text-2xl'>Contact</h2>
-                    <div className='flex flex-col'>
-                        <Link to='' className='text-white hover:text-teal-500'>
-                        Whatsapp
-                        </Link>
-                        <Link to='' className='text-white hover:text-teal-500'>
-                        Facebook
-                        </Link>
-                        <Link to='' className='text-white hover:text-teal-500'>
-                        Linkedin
-                        </Link>
-                        <Link to='' className='text-white hover:text-teal-500'>
-                        Youtube
-                        </Link>
-                        <Link to='' className='text-white hover:text-teal-500'>
-                        Instgram
-                        </Link>
-                    </div>
-
-                </div>
-
-               </div>
-               <hr />
-               <div className='w-full text-center py-3 '>
                 <p className='text-white'>@AR DigiTech Planet 2026. All rights reserved.</p>
+                </div>
+                <div>
+                    <a
+                    href=''
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-block mr-3'>
+                    <FaFacebook className='text-white text-2xl cursor-pointer hover:text-blue-600 active:text-blue-600' />
+                    </a>
+                    <a
+                    href='https://github.com/Itx-webdev086'
+                    target='_blank'
+                    rel='noopener noreferrer' 
+                    className='inline-block mr-3'>
+                        <FaGithub className='text-white text-2xl cursor-pointer hover:text-black active:text-black' />
+                    </a>
+                    <a 
+                    href=''
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-block mr-3'>
+                        <FaInstagram className='text-white text-2xl cursor-pointer hover:text-pink-600 active:text-pink-600' />
+                    </a>
+                    <a 
+                    href='https://wa.me/923404228368'
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-block mr-3'>
+                        <FaWhatsapp className='text-white text-2xl cursor-pointer hover:text-green-600 active:text-green-600' />
+                    </a>
+                    <a 
+                    href=''
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    className='inline-block mr-3'>
+                        <FaLinkedinIn className='text-white text-2xl cursor-pointer hover:text-blue-600 active:text-blue-600' />
+                    </a>
+                </div>
+
                </div>
             </Container>
 

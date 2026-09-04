@@ -19,8 +19,8 @@ function Home() {
     
    if (!userData) {
     return (
-        <div className='mt-18 h-screen w-full'>
-        <div className='flex justify-start items-center min-h-screen w-full bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${Hero})` }}>
+        <div className='mt-18 h-screen w-full flex justify-center items-center'>
+        <div className='flex justify-start items-center h-1/2 md:h-screen w-full bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${Hero})` }}>
          <div className="space-y-5 w-full bg-transparent p-16">
             <div className='text-gray-800 font-serif space-y-7'>
                 <h1 className='text-4xl md:text-7xl font-extrabold'>Your <br></br> thoughts & stories</h1>

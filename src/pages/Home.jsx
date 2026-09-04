@@ -23,7 +23,7 @@ function Home() {
         <div className='flex justify-start items-center min-h-screen w-full bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${Hero})` }}>
          <div className="space-y-5 w-full bg-transparent p-16">
             <div className='text-gray-800 font-serif space-y-7'>
-                <h1 className='text-7xl font-extrabold'>Your <br></br> thoughts & stories</h1>
+                <h1 className='text-4xl md:text-7xl font-extrabold'>Your <br></br> thoughts & stories</h1>
                 <p className="text-gray-800">A place where stories begin, and people connect.</p>
             </div>
             <div className='flex justify-start items-center gap-4'>

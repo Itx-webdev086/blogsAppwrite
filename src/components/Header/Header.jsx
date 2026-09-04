@@ -58,7 +58,7 @@ function Header() {
             </Link>
           </div>
          {/* desktop nav */}
-          <ul className="hidden md:flex gap-4 items-center mx-auto">
+          <ul className="hidden md:flex gap-4 items-center ml-auto">
             {authStatus ? (
             navItems.map((item) =>
                item.active ? (
@@ -75,7 +75,7 @@ function Header() {
             <li>
               <button
               onClick={() => navigate('/signup')}
-               className="rounded-md py-1 px-3 float-end bg-white text-gray-800 active:scale-95 cursor-pointer">
+               className="rounded-md py-1 px-3 float-end font-semibold bg-white text-gray-800 active:scale-95 cursor-pointer">
                 Get started
               </button>
               </li>}

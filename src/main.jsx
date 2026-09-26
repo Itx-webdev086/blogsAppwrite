@@ -12,6 +12,7 @@ import AddPostPage from './pages/AddPostPage.jsx'
 import EditPost from './pages/EditPost.jsx'
 import Post from './pages/Post.jsx'
 import { MyPosts } from './components/index.js'
+import { UserProfile} from './components/index.js'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 
 const router = createBrowserRouter([
@@ -63,6 +64,12 @@ const router = createBrowserRouter([
           path: '/myblogs',
           element: (<AuthLayout authentication>
             <MyPosts />
+          </AuthLayout>)
+        },
+        {
+          path: '/profile',
+          element: (<AuthLayout authentication>
+            <UserProfile />
           </AuthLayout>)
         }
 

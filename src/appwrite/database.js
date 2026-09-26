@@ -19,7 +19,7 @@ export class DatabaseService{
         try {
             return await this.database.createRow(
                 config.appwriteDatabaseId,
-                config.appwriteCollectionId,
+                config.appwritePostCollectionId,
                 slug,
                 {
                     title,
@@ -39,7 +39,7 @@ export class DatabaseService{
         try {
           return await this.database.updateRow(
                 config.appwriteDatabaseId,
-                config.appwriteCollectionId,
+                config.appwritePostCollectionId,
                 slug,
                 {
                     title,
@@ -58,7 +58,7 @@ export class DatabaseService{
         try {
             await this.database.deleteRow(
                 config.appwriteDatabaseId,
-                config.appwriteCollectionId,
+                config.appwritePostCollectionId,
                 slug
             )
             return true
@@ -72,7 +72,7 @@ export class DatabaseService{
         try {
            return await this.database.getRow(
                 config.appwriteDatabaseId,
-                config.appwriteCollectionId,
+                config.appwritePostCollectionId,
                 slug
             )
         } catch (error) {
@@ -85,7 +85,7 @@ export class DatabaseService{
         try {
             return await this.database.listRows(
                 config.appwriteDatabaseId,
-                config.appwriteCollectionId,
+                config.appwritePostCollectionId,
                 queries
             )
         } catch (error) {

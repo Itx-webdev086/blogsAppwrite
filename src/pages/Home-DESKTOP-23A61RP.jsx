@@ -1,0 +1,61 @@
+import {useState, useEffect, useId} from 'react'
+import {Container, Postcard} from '../components'
+import databaseService from '../appwrite/database'
+import { useSelector } from 'react-redux'
+import { Link, useSearchParams} from 'react-router-dom'
+import Hero from '../assets/hero.jpg'
+
+function Home() {
+    const userData = useSelector(state => state.auth.status)
+    const [posts, setPosts] = useState([])
+    const [searchparams] = useSearchParams()
+    const search = searchparams.get('search') || ''
+    const id = useId()
+    useEffect(() => {
+        databaseService.getPosts().then((posts) => {
+            if (posts){
+            setPosts(posts.rows)
+            }
+        })
+    }, [])
+    const filteredPosts = search.trim()
+        ? posts.filter((post) =>
+            post.title.toLowerCase().includes(search.toLowerCase())
+          )
+        : posts
+    
+   if (!userData) {
+    return (
+        <div className='mt-18 h-screen w-full flex justify-center items-center'>
+        <div className='flex justify-start items-center h-1/2 md:h-screen w-full bg-contain bg-no-repeat bg-center' style={{ backgroundImage: `url(${Hero})` }}>
+         <div className="space-y-5 w-full bg-transparent p-16">
+            <div className='text-gray-800 font-serif space-y-7'>
+                <h1 className='text-4xl md:text-7xl font-extrabold'>Your <br></br> thoughts & stories</h1>
+                <p className="text-gray-800">A place where stories begin, and people connect.</p>
+            </div>
+            <div className='flex justify-start items-center gap-4'>
+            <Link to="/login" className='text-md text-white bg-gray-800 rounded-md py-2 px-4 hover:bg-teal-500 hover:text-gray-800 active:scale-95'>Start connecting</Link>
+            </div>
+            </div>
+        </div>
+        </div>
+        
+    )
+   }
+   return(
+       <Container>
+            <div className='py-10 mt-28'>
+            <div className = "flex flex-wrap justify-center gap-4">
+            {filteredPosts.length > 0 ? (
+            filteredPosts.map((post) => (
+                <div key={id} className= "w-full sm:w-1/2 md:w-1/4 bg-gray-100 rounded-lg shadow-xl shadow-gray-500 p-4">
+                <Postcard {...post} />
+                </div>
+            )) ) : <p className='text-3xl text-gray-800 text-center'>No posts found...</p>}
+            </div>
+    </div>
+        </Container>
+   )
+}
+
+export default Home

@@ -13,6 +13,7 @@ import PostForm from './PostForm/PostForm'
 import Input from './Input'
 import Select from './Select'
 import MyPosts from './MyPosts'
+import UserProfile from './UserProfile'
 
 
 export {
@@ -30,5 +31,6 @@ export {
     PostForm,
     Input,
     Select,
-    MyPosts
+    MyPosts,
+    UserProfile
 }

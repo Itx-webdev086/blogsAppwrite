@@ -1,6 +1,6 @@
 /* eslint-disable no-useless-catch */
 
-import { Client, Account, ID} from 'appwrite'
+import { Client, Account,Databases, ID} from 'appwrite'
 import config from '../config/config.js'
 
 export class AuthService{
@@ -12,6 +12,7 @@ export class AuthService{
             .setEndpoint(config.appwriteUrl)
             .setProject(config.appwriteProjectId);
         this.account = new Account(this.client)
+        this.databases = new Databases(this.client)
     }
 
     async createAccount ({email, password, name}) {
@@ -19,6 +20,15 @@ export class AuthService{
        const userAccount = await this.account.create(ID.unique(), email, password, name)
 
        if (userAccount){
+           await this.databases.createDocument(
+            config.appwriteDatabaseId,
+            config.appwriteProfileCollectionId,
+            ID.unique(),
+            {
+                userId: userAccount.$id,
+                username: userAccount.name,
+                email: userAccount.email,
+            })
             // login method
             return this.login({email, password})
        }
